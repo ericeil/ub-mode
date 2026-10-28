@@ -105,6 +105,14 @@ Every time you are asked to make a change follow:
 * The test calls the code the way its user does and checks the result that user would see.
 * If the test would still pass when every function returned nothing, throw it out.
 
+## Setup
+
+* Before crapper, dryer, or mutator, check that each is installed and that its checkout's origin is the ericeil fork. If not, install it from that fork.
+* crapper (`master`): clone https://github.com/ericeil/crapper and run `./crapper`. The first run creates `.venv` and installs the tool.
+* dryer (`master`): clone https://github.com/ericeil/dryer and run `./dryer`. The first run creates `.venv` and installs the tool.
+* mutator (`main`): clone https://github.com/ericeil/mutator and run `./mutator`. The first run creates `.venv` and installs the tool. Clone https://github.com/ericeil/crapper into the same parent directory (`../crapper`). Mutator needs that checkout for Kotlin function names.
+* When a project needs extra build flags, pass `--gradle-arg` or `--maven-arg` to crapper and mutator. Repeat the option for each flag.
+
 ## Crapper
 
 * Use the crapper tool
